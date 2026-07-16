@@ -7,7 +7,8 @@ import React, { useState, useEffect } from "react";
 import { 
   Users, Flame, HelpCircle, BookOpen, AlertCircle, XCircle, CheckCircle, 
   Sparkles, Award, ArrowRight, ShieldCheck, PlayCircle, Globe, GraduationCap,
-  Trophy, Check, X, Headphones, Volume2, Calendar, ShieldAlert, Video, FileCheck
+  Trophy, Check, X, Headphones, Volume2, Calendar, ShieldAlert, Video, FileCheck,
+  Landmark
 } from "lucide-react";
 
 interface HeroProps {
@@ -34,6 +35,9 @@ export default function Hero({ setCurrentView, openSignupModal, language = 'en',
   // Gamified Leaderboard Demo State
   const [amaraXP, setAmaraXP] = useState<number>(1220);
   const [hasClaimedXPDemo, setHasClaimedXPDemo] = useState<boolean>(false);
+
+  // Active Demo Tab State
+  const [activeDemoTab, setActiveDemoTab] = useState<'student' | 'bank'>('student');
 
   // Countdown timer for cohort closes
   useEffect(() => {
@@ -201,24 +205,24 @@ export default function Hero({ setCurrentView, openSignupModal, language = 'en',
   // Syllabus Segment Cards
   const syllabusSeries = [
     {
-      id: "Series 1",
-      title: "Objective",
-      items: ["Grammar rules", "Idiomatic Vocabulary", "Text comprehension"]
+      id: "Series 1 (Active Pilot)",
+      title: "Language & Oral Logic",
+      items: ["Grammar & Sentence Syntax", "French/English Translation", "Oral Listening Tracks"]
     },
     {
-      id: "Series 2",
-      title: "Theory",
-      items: ["Essay construction", "Formal Letter Writing", "English-French Translation"]
+      id: "Series 2 (Phase 2)",
+      title: "Sciences & Mathematics",
+      items: ["Core Equation Solvers", "Visual Structural Biology", "Chemistry Lab Practice"]
     },
     {
-      id: "Series 3",
-      title: "Oral",
-      items: ["Audio listening tracks", "Pronunciation diagnostics", "Spoken conversation skills"]
+      id: "Series 3 (Infrastructure)",
+      title: "Data-Efficient Engine",
+      items: ["Low-bandwidth smart caching", "Lightweight database queries", "Offline-resilient syncs"]
     },
     {
-      id: "Series 4",
-      title: "Le Blitz",
-      items: ["High-pressure theory mocks", "Conjugations and synonyms", "Time management skills"]
+      id: "Series 4 (Open Banking)",
+      title: "Financial Integration",
+      items: ["Tier-1 Wema Account Creation", "Automated Micro-Reward Transfers", "Escrow Ledger Auditing"]
     }
   ];
 
@@ -245,18 +249,18 @@ export default function Hero({ setCurrentView, openSignupModal, language = 'en',
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
               </span>
-              Cohort 1 is now open · Limited spots available · Register today
+              Live Pilot Active: High-barrier language and oral engine live for testing
             </div>
 
             {/* Heading */}
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tight text-brand-blue mb-6 leading-[1.08]">
-              MASTER FRENCH. <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue-light via-blue-700 to-indigo-900">DOMINATE WAEC.</span>
+              GAMIFIED MASTERY. <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue-light via-blue-700 to-indigo-900">CONQUER EXAMS.</span>
             </h1>
 
             {/* Subheading */}
             <p className="text-slate-500 text-base md:text-lg lg:text-xl max-w-2xl mb-10 leading-relaxed font-medium">
-              West Africa's first French-exam-bootcamp. 30-Days. One Cohort. Thousands of students across Anglophone Africa. One goal — excellence.
+              The data-efficient, smart-syncing exam preparation engine built for the African reality. We combine gamified testing, deep caching, and diagnostic analytics: starting with our high-stakes language pilot.
             </p>
 
             {/* Action Buttons */}
@@ -444,7 +448,7 @@ export default function Hero({ setCurrentView, openSignupModal, language = 'en',
         <div className="text-center max-w-2xl mx-auto mb-16">
           <span className="bg-rose-50 text-brand-coral border border-rose-100 uppercase font-mono font-black tracking-wider text-[10px] px-3 py-1 rounded-full inline-block mb-3">THE REALITY</span>
           <h2 className="font-display text-2xl md:text-3xl font-extrabold text-brand-blue tracking-tight leading-tight">
-         Most students fail WAEC French not because they're not smart — but because they never had the right preparation
+            Most students struggle with high-stakes exams not because they lack talent, but because traditional prep tools are lonely and boring.
           </h2>
         </div>
 
@@ -467,12 +471,12 @@ export default function Hero({ setCurrentView, openSignupModal, language = 'en',
         </div>
       </section>
 
-      {/* THE LA PLUME SOLUTION Section */}
+      {/* THE AFRICAN PEN SOLUTION Section */}
       <section className="w-full bg-slate-50/40 border-y border-slate-100 py-20 md:py-28">
         <div className="max-w-6xl mx-auto px-4">
           
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="bg-brand-blue text-white uppercase font-mono font-black tracking-wider text-[10px] px-3 py-1 rounded-full inline-block mb-3">THE LA PLUME SOLUTION</span>
+            <span className="bg-brand-blue text-white uppercase font-mono font-black tracking-wider text-[10px] px-3 py-1 rounded-full inline-block mb-3">THE AFRICAN PEN SOLUTION</span>
             <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-extrabold text-brand-blue tracking-tight">
               Everything you need to walk into that exam hall ready.
             </h2>
@@ -611,104 +615,196 @@ export default function Hero({ setCurrentView, openSignupModal, language = 'en',
 
       </section>
 
-      {/* GAMIFIED REVIEWS ("Learning that feels like winning") section */}
+      {/* TWO PORTALS ("Two Portals. One Seamless Pipeline.") section */}
       <section className="w-full bg-slate-50/40 border-y border-slate-100 py-20 md:py-28">
         <div className="max-w-6xl mx-auto px-4">
           
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="bg-amber-100 text-amber-800 border border-amber-200 uppercase font-mono font-black tracking-wider text-[10px] px-3 py-1 rounded-full inline-block mb-3">GAMIFIED REVIEWS</span>
+            <span className="bg-amber-100 text-amber-800 border border-amber-200 uppercase font-mono font-black tracking-wider text-[10px] px-3 py-1 rounded-full inline-block mb-3">TWO PORTALS</span>
             <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-extrabold text-brand-blue tracking-tight">
-              Learning that feels like winning
+              Two Portals. One Seamless Pipeline.
             </h2>
-            <p className="text-slate-500 text-sm md:text-base mt-4 font-semibold max-w-xl mx-auto">
-              Study guides are boring. High-stakes competition is electric. La Plume wraps the total WAEC curriculum in a premium game loop that keeps you addicted to studying French daily.
-            </p>
           </div>
 
-          {/* Dashboard Leaderboard mockup card */}
-          <div className="max-w-xl mx-auto bg-white rounded-3xl border border-slate-100 shadow-xl overflow-hidden p-6 md:p-8">
-            
-            {/* User score header row */}
-            <div className="flex items-center justify-between gap-4 pb-6 border-b border-slate-100 mb-6">
-              <div className="flex items-center gap-3">
-                <div className="bg-brand-blue/5 p-3 rounded-2xl border border-brand-blue/10">
-                  <GraduationCap className="w-6 h-6 text-brand-blue" />
-                </div>
-                <div>
-                  <h4 className="font-display font-extrabold text-base text-brand-blue">Amara Temi <span className="text-[10px] text-slate-400 font-mono font-bold uppercase">(Vous)</span></h4>
-                  <span className="text-[10px] font-mono uppercase bg-amber-50 text-amber-700 font-bold px-2 py-0.5 rounded-md">
-                    Niveau 3 Elite Cadet 🚀
-                  </span>
-                </div>
-              </div>
-              <div className="text-right">
-                <span className="text-sm font-black text-brand-blue font-mono block">{amaraXP} XP</span>
-                <span className="text-[9px] text-slate-400 uppercase font-bold tracking-wider">Points totaux</span>
-              </div>
-            </div>
+          {/* Toggle Buttons */}
+          <div className="flex justify-center gap-4 mb-10">
+            <button
+              onClick={() => setActiveDemoTab('student')}
+              className={`flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-sm transition-all ${
+                activeDemoTab === 'student'
+                  ? 'bg-brand-blue text-white shadow-lg'
+                  : 'bg-white text-slate-600 border border-slate-200 hover:bg-slate-50'
+              }`}
+            >
+              <GraduationCap className="w-5 h-5" />
+              1. Student Prep Portal
+            </button>
+            <button
+              onClick={() => setActiveDemoTab('bank')}
+              className={`flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-sm transition-all ${
+                activeDemoTab === 'bank'
+                  ? 'bg-slate-900 text-white shadow-lg'
+                  : 'bg-white text-slate-600 border border-slate-200 hover:bg-slate-50'
+              }`}
+            >
+              <Landmark className="w-5 h-5" />
+              2. Sponsor & Wema Bank Portal
+            </button>
+          </div>
 
-            {/* Progress bar to Level 4 */}
-            <div className="mb-8">
-              <div className="flex justify-between text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-2">
-                <span>Progression vers Niveau 4</span>
-                <span>{amaraXP} / 1500 XP</span>
-              </div>
-              <div className="h-2.5 w-full bg-slate-100 rounded-full overflow-hidden">
-                <div 
-                  className="h-full bg-brand-blue rounded-full transition-all duration-1000"
-                  style={{ width: `${(amaraXP / 1500) * 100}%` }}
-                />
-              </div>
-              {hasClaimedXPDemo && (
-                <span className="text-[10px] text-emerald-500 font-bold mt-1.5 block text-center animate-bounce">
-                  🎉 +50 XP Récupérés via Le Blitz Live Demo !
-                </span>
-              )}
-            </div>
-
-            {/* Ranking leaderboard list */}
-            <div>
-              <span className="text-[10px] font-mono uppercase text-slate-400 font-black tracking-widest block mb-4">
-                CLASSEMENT RÉGIONAL EN DIRECT ~ COHORTE 1
-              </span>
-
-              <div className="space-y-2">
-                {[
-                  { rank: 1, name: "Kofi Mensah", country: "🇬🇭 Ghana", xp: 1420 },
-                  { rank: 2, name: "Amina Bello", country: "🇳🇬 Nigeria", xp: 1310 },
-                  { rank: 3, name: "Kwame Appiah", country:"🇬🇭 Ghana", xp: 1240 },
-                  { rank: 4, name: "Amara Temi", country: "🇳🇬 Nigeria", xp: amaraXP, isCurrentUser: true },
-                  { rank: 5, name: "Femi Olatunji", country: "🇳🇬 Nigeria", xp: 1150 }
-                ].map((student, sidx) => {
-                  return (
-                    <div 
-                      key={sidx}
-                      className={`flex items-center justify-between p-3.5 rounded-xl border transition-all ${
-                        student.isCurrentUser
-                          ? "bg-brand-blue/5 border-brand-blue text-brand-blue font-bold shadow-xs scale-[1.02]"
-                          : "bg-slate-50/50 border-slate-100/50 text-slate-600"
-                      }`}
-                    >
-                      <div className="flex items-center gap-3">
-                        <span className={`font-mono text-xs font-black min-w-[18px] text-center ${
-                          student.rank === 1 ? "text-amber-500" : student.rank === 2 ? "text-slate-400" : student.rank === 3 ? "text-amber-700" : "text-slate-400"
-                        }`}>
-                          #{student.rank}
-                        </span>
-                        <div>
-                          <span className="text-xs font-extrabold block leading-tight">
-                            {student.name} {student.isCurrentUser && "👑"}
-                          </span>
-                          <span className="text-[9px] text-slate-400 block font-semibold">{student.country}</span>
-                        </div>
-                      </div>
-                      <span className="text-xs font-extrabold font-mono">{student.xp} XP</span>
+          {/* Content Area */}
+          <div className="max-w-xl mx-auto">
+            {activeDemoTab === 'student' ? (
+              <div className="bg-white rounded-3xl border border-slate-100 shadow-xl overflow-hidden p-6 md:p-8">
+                {/* User score header row */}
+                <div className="flex items-center justify-between gap-4 pb-6 border-b border-slate-100 mb-6">
+                  <div className="flex items-center gap-3">
+                    <div className="bg-brand-blue/5 p-3 rounded-2xl border border-brand-blue/10">
+                      <GraduationCap className="w-6 h-6 text-brand-blue" />
                     </div>
-                  );
-                })}
-              </div>
-            </div>
+                    <div>
+                      <h4 className="font-display font-extrabold text-base text-brand-blue">Amara Temi <span className="text-[10px] text-slate-400 font-mono font-bold uppercase">(Vous)</span></h4>
+                      <span className="text-[10px] font-mono uppercase bg-amber-50 text-amber-700 font-bold px-2 py-0.5 rounded-md">
+                        Niveau 3 Elite Cadet 🚀
+                      </span>
+                    </div>
+                  </div>
+                  <div className="text-right">
+                    <span className="text-sm font-black text-brand-blue font-mono block">{amaraXP} XP</span>
+                    <span className="text-[9px] text-slate-400 uppercase font-bold tracking-wider">Points totaux</span>
+                  </div>
+                </div>
 
+                {/* Reward Qualification Checklist */}
+                <div className="mb-8">
+                  <h5 className="text-sm font-bold text-slate-800 mb-3">Reward Qualification Checklist</h5>
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-between p-3 bg-emerald-50 border border-emerald-100 rounded-xl">
+                      <span className="text-xs font-semibold text-slate-700">Syllabus Progress (Min. 80%)</span>
+                      <span className="flex items-center gap-1.5 text-xs font-bold text-emerald-700">
+                        <CheckCircle className="w-4 h-4" />
+                        85% (Qualified)
+                      </span>
+                    </div>
+                    <div className="flex items-center justify-between p-3 bg-emerald-50 border border-emerald-100 rounded-xl">
+                      <span className="text-xs font-semibold text-slate-700">Active 15-Day Study Streak</span>
+                      <span className="flex items-center gap-1.5 text-xs font-bold text-emerald-700">
+                        <CheckCircle className="w-4 h-4" />
+                        18 Days (Qualified)
+                      </span>
+                    </div>
+                    <div className="flex items-center justify-between p-3 bg-amber-50 border border-amber-100 rounded-xl">
+                      <span className="text-xs font-semibold text-slate-700">Linked Wema Youth Account</span>
+                      <span className="flex items-center gap-1.5 text-xs font-bold text-amber-700">
+                        <AlertCircle className="w-4 h-4" />
+                        Open Account to Claim Winnings
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Ranking leaderboard list */}
+                <div>
+                  <span className="text-[10px] font-mono uppercase text-slate-400 font-black tracking-widest block mb-4">
+                    LIVE REGIONAL LEADERBOARD
+                  </span>
+
+                  <div className="space-y-2">
+                    {[
+                      { rank: 1, name: "Kofi Mensah", country: "🇬🇭 Ghana", xp: 1420 },
+                      { rank: 2, name: "Amina Bello", country: "🇳🇬 Nigeria", xp: 1310 },
+                      { rank: 3, name: "Kwame Appiah", country:"🇬🇭 Ghana", xp: 1240 },
+                      { rank: 4, name: "Amara Temi", country: "🇳🇬 Nigeria", xp: amaraXP, isCurrentUser: true },
+                      { rank: 5, name: "Femi Olatunji", country: "🇳🇬 Nigeria", xp: 1150 }
+                    ].map((student, sidx) => {
+                      return (
+                        <div 
+                          key={sidx}
+                          className={`flex items-center justify-between p-3.5 rounded-xl border transition-all ${
+                            student.isCurrentUser
+                              ? "bg-brand-blue/5 border-brand-blue text-brand-blue font-bold shadow-xs scale-[1.02]"
+                              : "bg-slate-50/50 border-slate-100/50 text-slate-600"
+                          }`}
+                        >
+                          <div className="flex items-center gap-3">
+                            <span className={`font-mono text-xs font-black min-w-[18px] text-center ${
+                              student.rank === 1 ? "text-amber-500" : student.rank === 2 ? "text-slate-400" : student.rank === 3 ? "text-amber-700" : "text-slate-400"
+                            }`}>
+                              #{student.rank}
+                            </span>
+                            <div>
+                              <span className="text-xs font-extrabold block leading-tight">
+                                {student.name} {student.isCurrentUser && "👑"}
+                              </span>
+                              <span className="text-[9px] text-slate-400 block font-semibold">{student.country}</span>
+                            </div>
+                          </div>
+                          <span className="text-xs font-extrabold font-mono">{student.xp} XP</span>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <div className="bg-slate-900 rounded-3xl border border-slate-800 shadow-xl overflow-hidden p-6 md:p-8 text-white">
+                {/* Header */}
+                <div className="flex items-center justify-between gap-4 pb-6 border-b border-slate-800 mb-6">
+                  <div className="flex items-center gap-3">
+                    <div className="bg-slate-800 p-3 rounded-2xl border border-slate-700">
+                      <Landmark className="w-6 h-6 text-amber-400" />
+                    </div>
+                    <div>
+                      <h4 className="font-display font-extrabold text-base text-white">Wema Bank Campaign Dashboard</h4>
+                      <span className="text-[10px] font-mono uppercase bg-amber-400/20 text-amber-400 font-bold px-2 py-0.5 rounded-md border border-amber-400/30">
+                        Sandbox Mode Active
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Real-time KPIs Grid */}
+                <div className="grid grid-cols-2 gap-4 mb-8">
+                  <div className="bg-slate-800/50 border border-slate-700 p-4 rounded-2xl">
+                    <span className="text-[10px] font-mono uppercase text-slate-400 font-bold block mb-1">New Wema Accounts Opened</span>
+                    <span className="text-xl font-black text-white font-mono block">1,240</span>
+                    <span className="text-[10px] font-bold text-emerald-400 flex items-center gap-1">
+                      <ArrowRight className="w-3 h-3 rotate-[-45deg]" />
+                      +24% this week
+                    </span>
+                  </div>
+                  <div className="bg-slate-800/50 border border-slate-700 p-4 rounded-2xl">
+                    <span className="text-[10px] font-mono uppercase text-slate-400 font-bold block mb-1">Total Funded Deposits</span>
+                    <span className="text-xl font-black text-white font-mono block">6,200,000 ₦</span>
+                    <span className="text-[10px] font-bold text-blue-400">
+                      Avg. 5,000 ₦ per account
+                    </span>
+                  </div>
+                  <div className="bg-slate-800/50 border border-slate-700 p-4 rounded-2xl">
+                    <span className="text-[10px] font-mono uppercase text-slate-400 font-bold block mb-1">Acquisition Cost (CAC)</span>
+                    <span className="text-xl font-black text-white font-mono block">0 ₦</span>
+                    <span className="text-[10px] font-bold text-purple-400">
+                      100% Organic educational funnel
+                    </span>
+                  </div>
+                  <div className="bg-slate-800/50 border border-slate-700 p-4 rounded-2xl">
+                    <span className="text-[10px] font-mono uppercase text-slate-400 font-bold block mb-1">Wema API Utility</span>
+                    <span className="text-xl font-black text-white font-mono block">Tier-1 Active</span>
+                    <span className="text-[10px] font-bold text-green-400">
+                      KYC compliant account opening
+                    </span>
+                  </div>
+                </div>
+
+                {/* Automated Workflow */}
+                <div className="bg-slate-800/30 border border-slate-700 p-5 rounded-2xl">
+                  <h5 className="text-sm font-bold text-white mb-3">Automated Workflow</h5>
+                  <p className="text-xs text-slate-300 leading-relaxed">
+                    Once a student meets the academic compliance (80% syllabus progress + 15-day streak), the backend automatically triggers a micro-reward transfer to their linked Wema Youth Account. All transactions are recorded in the escrow ledger for auditing.
+                  </p>
+                </div>
+              </div>
+            )}
           </div>
 
         </div>
