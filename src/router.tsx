@@ -20,6 +20,7 @@ import LaTraductionPage from './pages/platform/LaTraductionPage'
 import LaDebatPage from './pages/platform/LaDebatPage'
 import LaOralPage from './pages/platform/LaOralPage'
 import MesCoursPage from './pages/platform/MesCoursPage'
+import WalletPage from './pages/platform/WalletPage'
 import OnboardingPage from './pages/platform/OnboardingPage'
 import PlanSelectionPage from './pages/payment/PlanSelectionPage'
 import ALATPaymentPage from './pages/payment/ALATPaymentPage'
@@ -187,9 +188,13 @@ export const router = createBrowserRouter([
         element: <LaOralPage />
       },
       {
-        path: '/mes-cours',
-        element: <MesCoursPage />
-      }
+              path: '/mes-cours',
+              element: <MesCoursPage />
+            },
+            {
+              path: '/wallet',
+              element: <WalletPage />
+            }
     ]
   }
 ])

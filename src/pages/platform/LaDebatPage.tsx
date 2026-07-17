@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { useNavigate } from 'react-router-dom'
 import LaDebat from '../../components/LaDebat'
 import { useAuthStore } from '../../stores/authStore'
@@ -14,6 +14,7 @@ export default function LaDebatPage() {
     else if (view === 'exams') navigate('/examens')
     else if (view === 'profile') navigate('/profil')
     else if (view === 'ranking' || view === 'classement') navigate('/classement')
+    else if (view === 'wallet') navigate('/wallet')
     else if (view === 'la-lettre') navigate('/projets/la-lettre')
     else if (view === 'la-traduction') navigate('/projets/la-traduction')
     else if (view === 'la-debat') navigate('/projets/la-debat')

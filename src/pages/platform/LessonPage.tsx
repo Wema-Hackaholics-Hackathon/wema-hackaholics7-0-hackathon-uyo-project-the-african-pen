@@ -18,6 +18,7 @@ export default function LessonPage() {
     else if (view === 'chat') navigate('/chat')
     else if (view === 'profile') navigate('/profil')
     else if (view === 'ranking' || view === 'classement') navigate('/classement')
+    else if (view === 'wallet') navigate('/wallet')
     else if (view === 'mes-cours') navigate('/mes-cours')
     else if (view === 'la-lettre') navigate('/projets/la-lettre')
     else if (view === 'la-traduction') navigate('/projets/la-traduction')

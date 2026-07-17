@@ -5,7 +5,7 @@ import { useAuthStore } from "../../stores/authStore";
 import { 
   GraduationCap, Star, Play, Lock, Settings, Bell, ChevronRight, Sparkles,
   Mic, Trophy, BookOpen, Compass, Award, Activity, Heart, ArrowLeft, Check,
-  Volume2, CheckCircle2, MessageSquare, Flag, Mail, Newspaper, FileEdit, X, Shield, Menu, Search, Moon, RotateCcw, Users, HelpCircle, Calendar, Flame, Clock
+  Volume2, CheckCircle2, MessageSquare, Flag, Mail, Newspaper, FileEdit, X, Shield, Menu, Search, Moon, RotateCcw, Users, HelpCircle, Calendar, Flame, Clock, Wallet
 } from "lucide-react";
 
 export default function QuizPage() {
@@ -37,6 +37,7 @@ export default function QuizPage() {
     else if (view === "ranking" || view === "classement") navigate("/classement");
     else if (view === "mes-cours") navigate("/mes-cours");
     else if (view === "exams") navigate("/examens");
+    else if (view === "wallet") navigate("/wallet");
     else if (view === "la-lettre") navigate("/projets/la-lettre");
     else if (view === "la-traduction") navigate("/projets/la-traduction");
     else if (view === "la-debat") navigate("/projets/la-debat");
@@ -51,6 +52,7 @@ export default function QuizPage() {
     { id: "courses", label: "Mes Cours", icon: BookOpen },
     { id: "blitz", label: "Le Blitz", icon: Play },
     { id: "leaderboard", label: "Classement", icon: Trophy },
+    { id: "wallet", label: "Portefeuille", icon: Wallet },
     { id: "progression", label: "Ma Progression", icon: Activity },
     { id: "badges", label: "Mes Badges", icon: Star },
     { id: "certificate", label: "Certificat", icon: Award },
@@ -122,6 +124,7 @@ export default function QuizPage() {
                     else if (item.id === "blitz") handleSetCurrentView("blitz");
                     else if (item.id === "exams") handleSetCurrentView("exams");
                     else if (item.id === "leaderboard") handleSetCurrentView("classement");
+                    else if (item.id === "wallet") handleSetCurrentView("wallet");
                     else if (item.id === "badges" || item.id === "certificate") handleSetCurrentView("profile");
                     else if (item.id === "courses") handleSetCurrentView("mes-cours");
                   }}

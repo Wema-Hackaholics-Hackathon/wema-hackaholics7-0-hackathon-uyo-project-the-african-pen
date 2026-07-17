@@ -8,7 +8,7 @@ import {
   BookOpen, Search, Star, Play, Calendar, Check, Award, Compass, 
   Trophy, Activity, ChevronRight, ArrowLeft, BookOpenCheck, 
   Sparkles, CheckCircle2, Bookmark, Flame, HelpCircle, GraduationCap,
-  MessageSquare, User, Lock, Volume2, ArrowRight, Menu, RefreshCw
+  MessageSquare, User, Lock, Volume2, ArrowRight, Menu, RefreshCw, Wallet
 } from "lucide-react";
 
 interface MesCoursProps {
@@ -780,6 +780,7 @@ export default function MesCours({
     { id: "courses", label: "Mes Cours", icon: BookOpen, active: true },
     { id: "blitz", label: "Le Blitz", icon: Play },
     { id: "leaderboard", label: "Classement", icon: Trophy },
+    { id: "wallet", label: "Portefeuille", icon: Wallet },
     { id: "progression", label: "Ma Progression", icon: Activity },
     { id: "profile", label: "Mon Profil", icon: User }
   ];
@@ -839,6 +840,7 @@ export default function MesCours({
                     else if (item.id === "parcours") setCurrentView("parcours");
                     else if (item.id === "blitz") setCurrentView("blitz");
                     else if (item.id === "leaderboard") setCurrentView("ranking");
+                    else if (item.id === "wallet") setCurrentView("wallet");
                     else if (item.id === "profile" || item.id === "progression") setCurrentView("profile");
                   }}
                   className={`w-full flex items-center justify-between px-4 py-3 rounded-xl text-xs font-bold transition-all cursor-pointer ${

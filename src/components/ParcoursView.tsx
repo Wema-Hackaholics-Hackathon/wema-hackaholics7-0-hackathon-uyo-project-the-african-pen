@@ -7,7 +7,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { 
   GraduationCap, Star, Play, Lock, Settings, Bell, ChevronRight, Sparkles,
   Mic, Trophy, BookOpen, Compass, Award, Activity, Heart, ArrowLeft, Check,
-  Volume2, CheckCircle2, MessageSquare, Flag, Mail, Newspaper, FileEdit, X, Shield, Menu
+  Volume2, CheckCircle2, MessageSquare, Flag, Mail, Newspaper, FileEdit, X, Shield, Menu, Wallet
 } from "lucide-react";
 
 interface ParcoursViewProps {
@@ -126,6 +126,7 @@ export default function ParcoursView({
     { id: "courses", label: "Mes Cours", icon: BookOpen },
     { id: "blitz", label: "Le Blitz", icon: Play },
     { id: "leaderboard", label: "Classement", icon: Trophy },
+    { id: "wallet", label: "Portefeuille", icon: Wallet },
     { id: "progression", label: "Ma Progression", icon: Activity },
     { id: "badges", label: "Mes Badges", icon: Star },
     { id: "certificate", label: "Certificat", icon: Award },
@@ -451,6 +452,8 @@ export default function ParcoursView({
                       setCurrentView("exams");
                     } else if (item.id === "leaderboard") {
                       setCurrentView("ranking");
+                    } else if (item.id === "wallet") {
+                      setCurrentView("wallet");
                     } else if (item.id === "badges" || item.id === "certificate") {
                       setCurrentView("profile");
                     } else if (item.id === "courses") {

@@ -24,8 +24,8 @@ interface AuthStore {
   setUser: (user: User | null) => void
   setToken: (token: string | null) => void
   logout: () => void
-  updateXP: (xp: number) => void
-  updateStreak: (streak: number) => void
+  updateXP: (xp: number | ((prev: number) => number)) => void
+  updateStreak: (streak: number | ((prev: number) => number)) => void
   setIsPremium: (isPremium: boolean) => void
   setOnboardingComplete: (complete: boolean) => void
 }
