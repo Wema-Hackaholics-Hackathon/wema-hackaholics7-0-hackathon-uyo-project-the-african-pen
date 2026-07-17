@@ -14,7 +14,7 @@ The African Pen is a data-efficient, smart-syncing exam preparation engine built
 
 *   **Live Application:** [https://wema-hackaholics7-0-hackathon-uyo-p-pearl.vercel.app/]
 *   **Backend API:** [Link to your live backend API endpoint URL, if separate]
-*   **Recorded Demo:** [Link to your recorded demo explaining how your solution works using Loom].
+*   **Recorded Demo:** [https://www.loom.com/share/2b54411e7b104c0290144769969db3ec].
 
 
 ---
